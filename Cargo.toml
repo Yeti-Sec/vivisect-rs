@@ -30,7 +30,7 @@ rmp-serde = "1.1"
 # Binary parsing
 goblin = "0.10"
 object = "0.36"
-scroll = "0.12"
+scroll = "0.13"
 
 # Disassembly
 capstone = "0.14"
