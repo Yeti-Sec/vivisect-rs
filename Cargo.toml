@@ -83,7 +83,7 @@ icicle-mem = { path = "deps/rust-icicle-emu/icicle-mem", optional = true }
 target-lexicon = { version = "0.12", optional = true }
 
 [dev-dependencies]
-criterion = "0.5"
+criterion = "0.8"
 proptest = "1.4"
 tempfile = "3.9"
 
