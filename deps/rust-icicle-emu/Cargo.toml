@@ -20,7 +20,7 @@ tracing = "0.1"
 serde = { version = "1.0", features = ["derive"] }
 
 # Binary parsing
-object = { version = "0.36", features = ["write_core", "write_std"] }
+object = { version = "0.37", features = ["write_core", "write_std"] }
 gimli = "0.32"
 bytemuck = "1.14"
 
