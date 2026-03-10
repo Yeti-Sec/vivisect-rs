@@ -21,7 +21,7 @@ serde = { version = "1.0", features = ["derive"] }
 
 # Binary parsing
 object = { version = "0.36", features = ["write_core", "write_std"] }
-gimli = "0.32"
+gimli = "0.33"
 bytemuck = "1.14"
 
 # Architecture
