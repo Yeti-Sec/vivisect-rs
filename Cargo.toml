@@ -46,7 +46,7 @@ clap = { version = "4.5", features = ["derive"] }
 
 # Collections and utilities
 indexmap = { version = "2.1", features = ["serde"] }
-bitflags = "2.4"
+bitflags = "2.11"
 bitvec = "1.0"
 byteorder = "1.5"
 bytes = "1.5"
@@ -71,7 +71,7 @@ cpp_demangle = "0.4"
 hex = "0.4"
 
 # Async (optional, for remote capabilities)
-tokio = { version = "1.35", features = ["full"], optional = true }
+tokio = { version = "1.50", features = ["full"], optional = true }
 
 # Optional: Emulation backends
 unicorn-engine = { version = "2.0", optional = true }
@@ -85,7 +85,7 @@ target-lexicon = { version = "0.12", optional = true }
 [dev-dependencies]
 criterion = "0.5"
 proptest = "1.4"
-tempfile = "3.9"
+tempfile = "3.26"
 
 [features]
 default = []
