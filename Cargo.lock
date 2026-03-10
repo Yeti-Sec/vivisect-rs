@@ -449,7 +449,7 @@ dependencies = [
  "rustc-hash",
  "serde",
  "smallvec",
- "target-lexicon 0.13.4",
+ "target-lexicon",
  "wasmtime-internal-math",
 ]
 
@@ -498,7 +498,7 @@ dependencies = [
  "cranelift-codegen",
  "log",
  "smallvec",
- "target-lexicon 0.13.4",
+ "target-lexicon",
 ]
 
 [[package]]
@@ -522,7 +522,7 @@ dependencies = [
  "libc",
  "log",
  "region",
- "target-lexicon 0.13.4",
+ "target-lexicon",
  "wasmtime-internal-jit-icache-coherence",
  "windows-sys 0.60.2",
 ]
@@ -546,7 +546,7 @@ checksum = "42be1df38c4db6e19ba19d5ab8e65950c2865da0ad9e972a99ef224f1f77b8af"
 dependencies = [
  "cranelift-codegen",
  "libc",
- "target-lexicon 0.13.4",
+ "target-lexicon",
 ]
 
 [[package]]
@@ -832,7 +832,7 @@ dependencies = [
  "object 0.36.7",
  "pcode",
  "sleigh-runtime",
- "target-lexicon 0.12.16",
+ "target-lexicon",
  "tracing",
 ]
 
@@ -848,7 +848,7 @@ dependencies = [
  "icicle-cpu",
  "memoffset",
  "pcode",
- "target-lexicon 0.12.16",
+ "target-lexicon",
  "tracing",
  "wasmtime-jit-debug",
 ]
@@ -864,7 +864,7 @@ dependencies = [
  "object 0.36.7",
  "pcode",
  "sleigh-runtime",
- "target-lexicon 0.12.16",
+ "target-lexicon",
  "tracing",
 ]
 
@@ -892,7 +892,7 @@ dependencies = [
  "serde-xml-rs",
  "sleigh-compile",
  "sleigh-runtime",
- "target-lexicon 0.12.16",
+ "target-lexicon",
  "tracing",
 ]
 
@@ -1733,12 +1733,6 @@ checksum = "55937e1799185b12863d447f42597ed69d9928686b8d88a1df17376a097d8369"
 
 [[package]]
 name = "target-lexicon"
-version = "0.12.16"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "61c41af27dd6d1e27b1b16b489db798443478cef1f06a660c96db617ba5de3b1"
-
-[[package]]
-name = "target-lexicon"
 version = "0.13.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "b1dd07eb858a2067e2f3c7155d54e929265c264e6f37efe3ee7a8d1b5a1dd0ba"
@@ -2014,7 +2008,7 @@ dependencies = [
  "scroll 0.12.0",
  "serde",
  "serde_json",
- "target-lexicon 0.12.16",
+ "target-lexicon",
  "tempfile",
  "thiserror 1.0.69",
  "tokio",
