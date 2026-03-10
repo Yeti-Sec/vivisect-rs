@@ -65,7 +65,7 @@ petgraph = "0.6"
 regex = "1.10"
 
 # C++ demangling
-cpp_demangle = "0.4"
+cpp_demangle = "0.5"
 
 # Hex encoding
 hex = "0.4"
