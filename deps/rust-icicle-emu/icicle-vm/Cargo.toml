@@ -1,0 +1,20 @@
+[package]
+name = "icicle-vm"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+icicle-cpu = { path = "../icicle-cpu" }
+icicle-linux = { path = "../icicle-linux" }
+icicle-jit = { path = "../icicle-jit" }
+anyhow = { workspace = true }
+pcode = { workspace = true }
+sleigh-runtime = { workspace = true }
+sleigh-compile = { workspace = true }
+target-lexicon = { workspace = true }
+tracing = { workspace = true }
+object = { workspace = true }
+serde = { workspace = true }
+serde-xml-rs = "0.8.1"
+ihex = "3.0.0"
+ron = "0.11.0"

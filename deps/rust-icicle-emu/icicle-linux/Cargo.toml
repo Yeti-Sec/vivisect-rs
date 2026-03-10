@@ -1,0 +1,18 @@
+[package]
+name = "icicle-linux"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+doctest = false
+
+[dependencies]
+icicle-cpu = { path = "../icicle-cpu" }
+sleigh-runtime = { workspace = true }
+object = { workspace = true }
+tracing = { workspace = true }
+pcode = { workspace = true }
+target-lexicon = { workspace = true }
+bitflags = "2.5.0"
+bstr = { version = "1.9.1", default-features = false, features = ["std"] }
+bytemuck = "1.15.0"

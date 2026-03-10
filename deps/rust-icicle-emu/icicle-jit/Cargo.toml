@@ -1,0 +1,23 @@
+[package]
+name = "icicle-jit"
+version = "0.2.0"
+edition = "2021"
+
+[lib]
+doctest = false
+
+[dependencies]
+icicle-cpu = { path = "../icicle-cpu" }
+pcode = { workspace = true }
+target-lexicon = { workspace = true }
+tracing = { workspace = true }
+memoffset = "0.9.1"
+cranelift = "0.124.1"
+cranelift-native = "0.124.1"
+cranelift-module = "0.124.1"
+cranelift-jit = "0.124.1"
+cranelift-codegen = { version = "0.124.1", default-features = false, features = ["std"] }
+wasmtime-jit-debug = { version = "34.0.2", features = ["perf_jitdump"] }
+
+[dev-dependencies]
+quickcheck = { version = "1.0.3", default-features = false }

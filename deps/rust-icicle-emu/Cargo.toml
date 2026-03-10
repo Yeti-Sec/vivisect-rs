@@ -1,0 +1,34 @@
+[workspace]
+resolver = "2"
+members = [
+    "icicle-vm",
+    "icicle-cpu",
+    "icicle-mem",
+    "icicle-jit",
+    "icicle-linux",
+    "sleigh/pcode",
+    "sleigh/sleigh-parse",
+    "sleigh/sleigh-runtime",
+    "sleigh/sleigh-compile",
+]
+
+[workspace.dependencies]
+# Core dependencies
+anyhow = "1.0"
+ahash = "0.8"
+tracing = "0.1"
+serde = { version = "1.0", features = ["derive"] }
+
+# Binary parsing
+object = { version = "0.36", features = ["write_core", "write_std"] }
+gimli = "0.32"
+bytemuck = "1.14"
+
+# Architecture
+target-lexicon = "0.12"
+
+# Internal crates
+pcode = { path = "sleigh/pcode" }
+sleigh-parse = { path = "sleigh/sleigh-parse" }
+sleigh-runtime = { path = "sleigh/sleigh-runtime" }
+sleigh-compile = { path = "sleigh/sleigh-compile" }
