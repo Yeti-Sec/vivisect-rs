@@ -1,0 +1,85 @@
+[package]
+name = "vivisect"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.75"
+authors = ["vivisect-rs contributors"]
+description = "A pure Rust disassembler, debugger, emulator, and static analysis framework"
+license = "Apache-2.0"
+repository = "https://github.com/Yeti-Sec/vivisect-rs"
+keywords = ["disassembler", "debugger", "emulator", "reverse-engineering", "binary-analysis"]
+categories = ["development-tools", "command-line-utilities"]
+
+[lib]
+name = "vivisect"
+path = "src/lib.rs"
+
+[[bin]]
+name = "vivbin"
+path = "src/main.rs"
+
+[dependencies]
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+rmp-serde = "1.1"  # msgpack backend
+
+# Binary parsing
+goblin = "0.8"  # PE, ELF, Mach-O parsing
+
+# Disassembly
+capstone = "0.12"  # Multi-architecture disassembly (ARM, MIPS, etc.)
+iced-x86 = "1.21"  # x86/x64 disassembly and assembly
+
+# Logging and tracing
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# CLI
+clap = { version = "4.4", features = ["derive"] }
+
+# Collections and utilities
+indexmap = { version = "2.1", features = ["serde"] }
+bitflags = "2.4"
+byteorder = "1.5"
+
+# Graph algorithms
+petgraph = "0.6"
+
+# Hex encoding
+hex = "0.4"
+
+# Async (optional, for remote server)
+tokio = { version = "1.35", features = ["full"], optional = true }
+axum = { version = "0.7", optional = true }
+tower = { version = "0.4", optional = true }
+
+# Optional: Unicorn-based emulation backend
+unicorn-engine = { version = "2.0", optional = true }
+
+# Optional: Icicle emulator (SLEIGH-backed CPU emulation)
+icicle-vm  = { git = "https://github.com/icicle-emu/icicle-emu", rev = "51558fc", optional = true }
+icicle-cpu = { git = "https://github.com/icicle-emu/icicle-emu", rev = "51558fc", optional = true }
+icicle-mem = { git = "https://github.com/icicle-emu/icicle-emu", rev = "51558fc", optional = true }
+target-lexicon = { version = "0.13", optional = true }
+
+
+[dev-dependencies]
+criterion = "0.5"
+tempfile = "3.9"
+
+[features]
+default = []
+emulation = ["unicorn-engine"]
+icicle = ["icicle-vm", "icicle-cpu", "icicle-mem", "target-lexicon"]
+remote = ["tokio", "axum", "tower"]
+full = ["icicle", "remote"]
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3

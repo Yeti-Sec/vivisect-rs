@@ -1,0 +1,17 @@
+/target/
+**/target/
+**/*.rs.bk
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Large reference vector files (regenerate with fixtures/generate_vectors.py)
+fixtures/vectors_conti_pe32.json
+fixtures/vectors_badbazzar_pe64.json
+fixtures/vectors_mirai_elf32.json
+fixtures/vectors_goelf_elf64.json
