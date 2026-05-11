@@ -40,11 +40,11 @@ tracing = "0.1"
 tracing-subscriber = "0.3"
 
 # CLI
-clap = { version = "4.4", features = ["derive"] }
+clap = { version = "4.5", features = ["derive"] }
 
 # Collections and utilities
-indexmap = { version = "2.1", features = ["serde"] }
-bitflags = "2.4"
+indexmap = { version = "2.14", features = ["serde"] }
+bitflags = "2.11"
 byteorder = "1.5"
 
 # Graph algorithms
@@ -54,7 +54,7 @@ petgraph = "0.6"
 hex = "0.4"
 
 # Async (optional, for remote server)
-tokio = { version = "1.35", features = ["full"], optional = true }
+tokio = { version = "1.52", features = ["full"], optional = true }
 axum = { version = "0.7", optional = true }
 tower = { version = "0.4", optional = true }
 
@@ -70,7 +70,7 @@ target-lexicon = { version = "0.13", optional = true }
 
 [dev-dependencies]
 criterion = "0.5"
-tempfile = "3.9"
+tempfile = "3.27"
 
 [features]
 default = []
