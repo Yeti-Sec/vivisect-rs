@@ -32,7 +32,7 @@ rmp-serde = "1.1"  # msgpack backend
 goblin = "0.8"  # PE, ELF, Mach-O parsing
 
 # Disassembly
-capstone = "0.12"  # Multi-architecture disassembly (ARM, MIPS, etc.)
+capstone = "0.14"  # Multi-architecture disassembly (ARM, MIPS, etc.)
 iced-x86 = "1.21"  # x86/x64 disassembly and assembly
 
 # Logging and tracing
