@@ -55,7 +55,7 @@ hex = "0.4"
 
 # Async (optional, for remote server)
 tokio = { version = "1.35", features = ["full"], optional = true }
-axum = { version = "0.7", optional = true }
+axum = { version = "0.8", optional = true }
 tower = { version = "0.4", optional = true }
 
 # Optional: Unicorn-based emulation backend
