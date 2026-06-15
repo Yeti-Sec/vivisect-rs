@@ -29,7 +29,7 @@ serde_json = "1.0"
 rmp-serde = "1.1"  # msgpack backend
 
 # Binary parsing
-goblin = "0.8"  # PE, ELF, Mach-O parsing
+goblin = "0.10"  # PE, ELF, Mach-O parsing
 
 # Disassembly
 capstone = "0.12"  # Multi-architecture disassembly (ARM, MIPS, etc.)
