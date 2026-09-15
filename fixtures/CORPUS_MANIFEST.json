@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "description": "Committed hermetic parity fixtures for vivisect-rs. Golden JSON was captured from Python vivisect and is the offline oracle of record (live Python vivisect and the raw-binary corpus are documented external blockers; see PARITY_REPORT.md). Raw-binary samples live under fixtures/corpus/ (or VIVISECT_CORPUS_DIR) and are intentionally NOT committed.",
+  "fixtures": [
+    {
+      "name": "golden_conti_pe32.json",
+      "sha256": "64764205f5b5f37dc934e21eb741e7ed2b8adc6dd7876d6bca0793ae8a03e4b5",
+      "bytes": 2880315,
+      "provenance": "Python vivisect golden export for the Conti PE32 sample (loader/opcode/function/xref reference)."
+    },
+    {
+      "name": "golden_badbazzar_pe64.json",
+      "sha256": "e943d2c09bf625f88c2718a723ada175e7d78cdd0763058fbef7dd591a97e2e8",
+      "bytes": 1649735,
+      "provenance": "Python vivisect golden export for the BadBazzar PE64 sample (loader/opcode/function/xref reference)."
+    },
+    {
+      "name": "impapi.json",
+      "sha256": "c106ecfc542d8b357c712deda98ea24a6c5f5de01feb9f151d1345b41720ee0d",
+      "bytes": 3461593,
+      "provenance": "Import-API type/prototype table (impapi) reference data."
+    }
+  ]
+}
